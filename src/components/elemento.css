@@ -1,0 +1,27 @@
+.container .row .col-sm {
+    font-family: 'Poppins';
+    font-size: 0.7rem;
+}
+
+#recomendados {
+    border-style: groove;
+}
+
+.container .row .col-sm img {
+    max-width: 90%;
+    height: auto;
+    margin: 5%;
+}
+
+.container .row .col-sm p {
+    margin: 8%;
+}
+
+.container .row .col-sm h5 {
+    margin: 8%;
+    font-size: 1rem;
+}
+
+.container .row .col-sm button {
+    margin: 8%;
+}

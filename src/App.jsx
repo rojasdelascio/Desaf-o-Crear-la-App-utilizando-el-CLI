@@ -3,8 +3,9 @@
 import Navbar from './components/navbar'
 import React, { Component } from 'react';
 import Elemento from './components/elemento';
+import CartWidget from './components/CartWidget';
 // import { Navbar, Jumbotron, Button } from 'react-bootstrap';
-// import './App.css';
+import './App.css';
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <nav>
-          <Navbar />
+          <Navbar>
+            <CartWidget />
+          </Navbar>
         </nav>
       </header>
       <div>

@@ -1,12 +1,9 @@
-
-//OJO con lo de abajo
-import Navbar from './components/navbar'
-import React, { Component } from 'react';
-import Elemento from './components/elemento';
-import CartWidget from './components/CartWidget';
-// import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import logo from './logo.svg';
 import './App.css';
-
+import Elemento from './components/elemento';
+import Navbar from './components/navbar';
+import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './components/CartWidget';
 
 function App() {
   const Elementos = [
@@ -15,31 +12,31 @@ function App() {
     { Titulo: 'Apocalipsis', Tipo: 'Guión', Descripcion: '1 año después de una explosión nuclear en Argentina, 5 personas de orígenes distintos, se unen para sobrevivir', Precio: 4 },
   ];
 
+  let cont;
+
+  const greeting = "¡Bienvenido a INDIEARG!";
+
   return (
     <div className="App">
       <header className="App-header">
         <nav>
-          <Navbar>
-            <CartWidget />
+          <Navbar >
+            <CartWidget numitems={cont} />
           </Navbar>
         </nav>
       </header>
-      <div>
-
-      </div>
-
       <main>
+        <ItemListContainer texto={greeting} />
+
         <div className="destacados">
           <h2 className="destacados__titulo">Descatados</h2>
-          <Elemento imagen={require('../src/assets/Pravus.png')} titulo={Elementos[0].Titulo} tipo={Elementos[0].Tipo} descripcion={Elementos[0].Descripcion} precio={Elementos[0].Precio} />
-          <Elemento imagen={require('../src/assets/comandante.png')} titulo={Elementos[1].Titulo} tipo={Elementos[1].Tipo} descripcion={Elementos[1].Descripcion} precio={Elementos[1].Precio} />
-          <Elemento imagen={require('../src/assets/apocalipsis.png')} titulo={Elementos[2].Titulo} tipo={Elementos[2].Tipo} descripcion={Elementos[2].Descripcion} precio={Elementos[2].Precio} />
-
+          <Elemento titulo={Elementos[0].Titulo} tipo={Elementos[0].Tipo} descripcion={Elementos[0].Descripcion} precio={Elementos[0].Precio} />
+          <Elemento titulo={Elementos[1].Titulo} tipo={Elementos[1].Tipo} descripcion={Elementos[1].Descripcion} precio={Elementos[1].Precio} />
+          <Elemento titulo={Elementos[2].Titulo} tipo={Elementos[2].Tipo} descripcion={Elementos[2].Descripcion} precio={Elementos[2].Precio} />
         </div>
       </main>
+
     </div>
-
-
   );
 }
 

@@ -1,6 +1,0 @@
-@import './variables.scss';
-@import "custom";
-@import "~bootstrap/scss/bootstrap";
-.destacados__titulo {
-    font-family: 'Montserrat';
-}

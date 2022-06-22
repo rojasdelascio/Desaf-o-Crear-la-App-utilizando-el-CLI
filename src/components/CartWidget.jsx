@@ -1,15 +1,14 @@
-import './CartWidget.css';
+import { RiShoppingCart2Line } from 'react-icons/ri';
 
-
-function CartWidget() {
-
+function CartWidget(prop) {
 
     return (
-
-        <Badge>
-            <ShoppingCartIcon />
-        </Badge>
+        <div>
+            <RiShoppingCart2Line />
+            <h2>{prop.numitems}</h2></div>
     );
+
+
 }
 
 export default CartWidget;

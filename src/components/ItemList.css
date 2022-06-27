@@ -1,0 +1,11 @@
+.div-itemList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    height: auto;
+}
+
+.items {
+    padding: 2rem;
+}

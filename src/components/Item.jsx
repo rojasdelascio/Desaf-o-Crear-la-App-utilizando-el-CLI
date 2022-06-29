@@ -1,16 +1,16 @@
 import './Item.css';
 import ItemCount from './ItemCount';
-import CartWidget from './CartWidget';
 
 
 function Item(props) {
-
+    console.log('en ITEM');
+    console.log(props.tipo);
+    console.log(props.nombre);
+    console.log(props.URL);
     return (
-
-
         <div className="card">
             <div className="card-body">
-                <img className="card-img-top" src="..." alt="Card image cap" />
+                <img className="card-img-top" src={props.URL} alt="Card image cap" />
                 <h5 className="card-title">{props.nombre}</h5>
                 <p className="card-text">Disponible: {props.stock}</p>
                 <p>Tipo: {props.tipo}</p>
@@ -18,7 +18,7 @@ function Item(props) {
                 <a href="#" class="btn btn-primary">Saber más</a>
 
             </div>
-            <ItemCount stock={props.stock} nombre={props.nombre} />
+            <ItemCount stock={props.stock} />
 
         </div>
 

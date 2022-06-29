@@ -8,15 +8,6 @@ function ItemListContainer(props) {
 
     const [items, setItems] = useState([]);
 
-    // const obtenerItems = () => {
-    //     return new Promise((resolve, reject) => {
-    //         setTimeout(() => {
-    //             arrayProductos.length > 0 ? resolve(arrayProductos) : reject("no hay datos");
-
-    //         }, 2000)
-    //     })
-    // }
-
     const obtenerItems = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -35,13 +26,6 @@ function ItemListContainer(props) {
             .then(res => setItems(res))
             .catch(err => console.log(err))
     }, [])
-    // useEffect(() => {
-    //     obtenerItems()
-    //         .then(res => setItems(res))
-    //         .then(res2 => console.log('RES222220' + res2))
-    //         .catch(err => console.log(err))
-    // }, [items])
-
 
 
     return (

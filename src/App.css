@@ -24,6 +24,10 @@
     color: white;
 }
 
+.navbar-header {
+    min-width: 100%;
+}
+
 .App-link {
     color: #61dafb;
 }

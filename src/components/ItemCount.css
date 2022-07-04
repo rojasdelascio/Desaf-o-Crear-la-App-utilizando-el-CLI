@@ -1,5 +1,5 @@
 .btn-group {
-    padding-bottom: 2rem;
-    width: 10%;
-    height: auto;
+    padding-bottom: 1rem;
+    max-width: 4rem;
+    max-height: 3rem;
 }

@@ -9,7 +9,7 @@ import CartWidget from './CartWidget';
 function Navbar() {
 
     return (
-        <header>
+        <header class="header">
 
 
             <nav className="navbar navbar-expand-lg bg-light">

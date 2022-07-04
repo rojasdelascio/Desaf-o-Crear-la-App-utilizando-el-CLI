@@ -4,6 +4,7 @@ import Navbar from './components/navbar';
 import ItemListContainer from './components/ItemListContainer';
 import CartWidget from './components/CartWidget';
 import ItemsCounter from './components/ItemsCounter';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   const Elementos = [
@@ -28,7 +29,7 @@ function App() {
 
       <main>
         <ItemListContainer texto={greeting} />
-
+        <ItemDetailContainer />
 
       </main>
 

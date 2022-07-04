@@ -1,10 +1,12 @@
 .card {
     width: 30%;
-    height: auto;
+    max-height: 35rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 .card-body {
-    height: auto;
+    height: 20%;
     display: flex;
     flex-direction: column;
 }
@@ -12,4 +14,9 @@
 .card-img-top {
     max-height: 35%;
     max-width: 90%;
+}
+
+.card-text {
+    height: 10%;
+    overflow: hidden;
 }

@@ -1,5 +1,6 @@
 import './Item.css';
 import ItemCount from './ItemCount';
+import ItemDetailContainer from './ItemDetailContainer';
 
 
 function Item(props) {
@@ -15,10 +16,10 @@ function Item(props) {
                 <p className="card-text">Disponible: {props.stock}</p>
                 <p>Tipo: {props.tipo}</p>
                 <p className="card-text">{props.descripcion}</p>
-                <a href="#" class="btn btn-primary">Saber más</a>
+                <a href="#" class="btn btn-primary" >Saber más</a>
 
             </div>
-            <ItemCount stock={props.stock} />
+            <ItemCount className="itemcount" stock={props.stock} />
 
         </div>
 

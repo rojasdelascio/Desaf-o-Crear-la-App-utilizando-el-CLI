@@ -12,7 +12,7 @@ function Item(props) {
     console.log(`EL ID ES ESTE EN ITEM + ${props.id}`);
 
     const imgto = `/${props.URL}`
-    const linkto = `/detalles/${props.id}`;
+    const linkto = `/item/${props.id}`;
     return (
         <div className="card">
             <div className="card-body">

@@ -42,7 +42,7 @@ function Navbar() {
                                     Secciones
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><Link to="/categoria/cortometraje" className="dropdown-item" >Cortometrajes</Link></li>
+                                    <li><Link to="/categoria/Cortometraje" className="dropdown-item" >Cortometrajes</Link></li>
                                     <li><Link to="/categoria/Serie" className="dropdown-item">Series</Link></li>
                                     <li><Link to="/categoria/Album" className="dropdown-item" >Musica</Link></li>
                                     <li><Link to="/categoria/Libro" className="dropdown-item" >Literatura </Link></li>

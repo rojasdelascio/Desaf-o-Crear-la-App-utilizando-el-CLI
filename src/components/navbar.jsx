@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import indieargpng from '../assets/INDIEARG.png'
 // import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import CartWidget from './CartWidget';
+import { Route, Routes, Link } from 'react-router-dom';
+import ItemListContainer from './ItemListContainer';
+import ItemDetailContainer from './ItemDetailContainer';
 //import 'Styles/App.scss';
 //OJO con lo de abajo
 
@@ -21,23 +24,28 @@ function Navbar() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+
+
+
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="./index.jsx">Home</a>
+                                <Link to="/" className="nav-link active" >Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="http://independiente-arg.com/pages/sobre-nosotros.html">Sobre Nosotros</a>
+                                <Link to="/productos" className="nav-link" >Productos</Link>
                             </li>
+
 
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Secciones
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a className="dropdown-item" href="http://independiente-arg.com/secciones/cine.html">Cortometrajes</a></li>
-                                    <li><a className="dropdown-item" href="http://independiente-arg.com/secciones/literatura.html">Cuentos Cortos</a></li>
-                                    <li><a className="dropdown-item" href="#">Guiones</a></li>
+                                    <li><Link to="/categoria/cortometraje" className="dropdown-item" >Cortometrajes</Link></li>
+                                    <li><Link to="/categoria/Serie" className="dropdown-item">Series</Link></li>
+                                    <li><Link to="/categoria/Album" className="dropdown-item" >Musica</Link></li>
+                                    <li><Link to="/categoria/Libro" className="dropdown-item" >Literatura </Link></li>
                                 </ul>
                             </li>
                         </ul>

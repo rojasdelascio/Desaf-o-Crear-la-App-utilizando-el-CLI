@@ -8,7 +8,7 @@ function CartWidget(props) {
     return (
         <div className="div-cart">
             <RiShoppingCart2Line className="icono-cart" />
-            <p className="contador-cart">{props.children}</p>
+            <p className="contador-cart">1</p>
         </div>
     );
 

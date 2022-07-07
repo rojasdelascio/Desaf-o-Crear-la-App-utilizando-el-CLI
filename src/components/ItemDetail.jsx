@@ -3,8 +3,14 @@ import { useState, useEffect } from 'react';
 import './ItemDetail.css';
 
 
+
 function ItemDetail(props) {
 
+    console.log("EN ITEM DETAIL IMPRIME ESTOOO")
+    console.log(props);
+    console.log('PROPS.URL EN ITEMDETAAAAIL');
+    console.log(props.URL);
+    let imagen = `/${props.URL}`;
     return (
 
         <div className="container">
@@ -14,7 +20,7 @@ function ItemDetail(props) {
                 </div>
                 <div className="row m-0">
                     <div className="col-lg-4 left-side-product-box pb-3">
-                        <img src={props.URL} className="border p-3" />
+                        <img src={imagen} className="border p-3" />
                         <span className="sub-img">
                             {/* <img src="" className="border p-2" />
                             <img src="" className="border p-2" />

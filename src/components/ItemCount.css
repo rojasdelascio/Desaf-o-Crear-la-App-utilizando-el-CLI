@@ -2,4 +2,6 @@
     padding-bottom: 1rem;
     max-width: 4rem;
     max-height: 3rem;
+    position: relative;
+    right: -5%;
 }

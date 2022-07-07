@@ -5,13 +5,11 @@ import ItemListContainer from './components/ItemListContainer';
 import CartWidget from './components/CartWidget';
 import ItemsCounter from './components/ItemsCounter';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { Route, Routes } from 'react-router-dom';
+import ItemDetail from './components/ItemDetail';
 
 function App() {
-  const Elementos = [
-    { Titulo: 'Pravus', Tipo: 'Cortometraje', Descripcion: 'Un hombre lucha con sus demonios internos; y, sin poder mostrar demasiado, cuenta todo sobre su pasado', Precio: 5 },
-    { Titulo: 'Comandante', Tipo: 'Cuento Corto', Descripcion: 'Pasaron los años en un abrir y cerrar de ojos, y Juan ahora se percata de que el resto de su vida transcurrirá en la prisión de un estado totalitarista', Precio: 3 },
-    { Titulo: 'Apocalipsis', Tipo: 'Guión', Descripcion: '1 año después de una explosión nuclear en Argentina, 5 personas de orígenes distintos, se unen para sobrevivir', Precio: 4 },
-  ];
+
 
   let cont;
 
@@ -20,20 +18,29 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <nav>
+        <nav className="navbar-header">
           <Navbar >
             <CartWidget><ItemsCounter /></CartWidget>
           </Navbar>
         </nav>
+
       </header>
 
       <main>
-        <ItemListContainer texto={greeting} />
-        <ItemDetailContainer />
+
+
+        <Routes>
+          {/* <Route path="/" element={<App />}></Route> */}
+          <Route path="/" element={<ItemListContainer texto={greeting} />}></Route>
+          <Route path="/productos" element={<ItemListContainer texto="Productos" />}></Route>
+          <Route path="/categoria/:tipo" element={<ItemListContainer texto={'Tipo'} />}></Route>
+          <Route path="/detalles/:detalleID" element={<ItemDetailContainer texto={'Detalle'} />}></Route>
+
+        </Routes>
 
       </main>
 
-    </div>
+    </div >
   );
 }
 

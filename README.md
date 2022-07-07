@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+=====Informacion Adicional=======
+
+1. Para el carrito se instaló la libreria React Icons [React Icons (react-icons.github.io)](https://react-icons.github.io/react-icons/) 
+
+Para instalar la misma realizar lo siguiente:
+
+npm install react-icons --save
+
+2. Para el estilo se instaló Bootstrap
+
+Para instalar bootstrap en react realizar lo siguiente:
+
+-Instalar bootstrap con npm : npm install bootstrap@5.2.0-beta1
+
+-Instalar popper porque bootstrap depende del mismo: npm i @popperjs/core
+
+P.D.: Si los links de abajo ya están colocados en el indes.jsx, entonces no será necesario instalar bootstrap con npm
+
+`<!-- CSS only --><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">` 
+
+`<!-- JavaScript Bundle with Popper --><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>`
+
+
+

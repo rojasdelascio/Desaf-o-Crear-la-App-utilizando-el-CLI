@@ -1,6 +1,7 @@
 import './ItemCount.css';
 import React, { useState } from 'react';
 import ItemsCounter from './ItemsCounter';
+import { Link } from 'react-router-dom';
 
 function ItemCount(props) {
     const [count, setItemCount] = useState(0);
@@ -15,18 +16,30 @@ function ItemCount(props) {
     const reiniciar = () => {
         if (count > 0) { setItemCount(0) }
     }
-    const onAdd = () => {
-        console.log(`Se agregaron al carrito ${count} unidades de ${props.nombre}`)
 
+    const onAddLocal = (input) => {
+
+        props.onAdd(input);
+        setItemCount(0);
     }
+    // const onAdd = () => {
+    //     console.log(`Se agregaron al carrito ${count} unidades de ${props.nombre}`)
+
+    // }
     return (
         <div className="btn-group" role="group" aria-label="Basic example">
+
             <button onClick={resta} type="button" className="btn btn-secondary">-</button>
-            <button type="button" className="btn btn-secondary">{count}</button>
+            {/* <button type="button" className="btn btn-secondary">{count}</button> */}
+            <input value={count} />
             <button onClick={suma} type="button" className="btn btn-secondary">+</button>
-            <button onClick={onAdd} type="button" className="btn btn-success">Añadir al carrito</button>
+            <button type="button" onClick={() => onAddLocal(count)} className="btn btn-secondary">Añadir al carrito</button>
+            <Link type="button" className="btn btn-success" to='/cart'  >Ir al carrito</Link>
+            {/* <Link>
+                <button onClick={onAdd} type="button" className="btn btn-success">Añadir al carrito</button></Link> */}
             <button onClick={reiniciar} type="button" class="btn btn-primary">Reiniciar</button>
-        </div>
+
+        </div >
 
     );
 }

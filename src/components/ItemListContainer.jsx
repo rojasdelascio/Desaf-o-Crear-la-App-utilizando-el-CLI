@@ -9,17 +9,13 @@ function ItemListContainer(props) {
 
     const [items, setItems] = useState([]);
     let { tipo } = useParams();
-    console.log('PARAAAM');
-    console.log(tipo);
-    console.log('ARRAYPRODUCTOS222')
-    console.log(arrayProductos);
+
 
     const obtenerItems = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const myData = tipo ? arrayProductos.filter((item) => item.Tipo === tipo) : arrayProductos;
-                console.log('MY DATAAAA')
-                console.log(myData);
+
                 resolve(myData);
             }, 500);
         }

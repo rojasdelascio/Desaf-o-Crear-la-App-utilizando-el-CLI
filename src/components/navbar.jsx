@@ -12,7 +12,7 @@ import ItemDetailContainer from './ItemDetailContainer';
 function Navbar() {
 
     return (
-        <header class="header">
+        <header className="header">
 
 
             <nav className="navbar navbar-expand-lg bg-light">

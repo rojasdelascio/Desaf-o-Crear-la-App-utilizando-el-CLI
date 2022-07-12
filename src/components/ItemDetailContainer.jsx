@@ -13,22 +13,19 @@ function ItemDetailContainer() {
     const [itemDetails, setItemDetails] = useState([]);
     let { detalleID } = useParams();
 
-    console.log('ACA EL ID DE DETALLESSS')
-    console.log(detalleID);
 
     const obtenerItemDetails = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const myData = detalleID ? arrayProductos.find((item) => item.id == detalleID) : arrayProductos;
-                console.log('MYDATA DETALLESS');
-                console.log(myData);
+
                 resolve(myData);
             }, 2000);
         })
     }
 
     useEffect(() => {
-        console.log("CORRIO USE EFFECT")
+
         obtenerItemDetails()
             .then(res => setItemDetails(res))
             .catch(err => console.log(err))

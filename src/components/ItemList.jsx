@@ -3,8 +3,7 @@ import Item from './Item';
 import React, { useState } from 'react';
 
 function ItemList(props) {
-    console.log('array en itemList');
-    console.log(props.array);
+
 
     return (
         <div className="div-itemList">

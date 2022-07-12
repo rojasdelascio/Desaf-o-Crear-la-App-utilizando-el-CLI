@@ -1,16 +1,29 @@
 import ItemCount from "./ItemCount";
 import { useState, useEffect } from 'react';
 import './ItemDetail.css';
+import { Link } from 'react-router-dom';
 
 
 
 function ItemDetail(props) {
 
-    console.log("EN ITEM DETAIL IMPRIME ESTOOO")
-    console.log(props);
-    console.log('PROPS.URL EN ITEMDETAAAAIL');
-    console.log(props.URL);
+    const [contador, setContador] = useState(0);
     let imagen = `/${props.URL}`;
+
+
+    const onAdd = (input) => {
+
+        setContador(input);
+        console.log('contador en ITemdetail')
+        console.log(contador);
+    }
+
+    const mostrar = () => {
+        console.log('contador en itemdetails')
+        console.log(contador);
+        contador == 0 ? <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> : <Link to='/cart'>Ir al carrito</Link>
+    }
+
     return (
 
         <div className="container">
@@ -62,8 +75,8 @@ function ItemDetail(props) {
                                     {/* <!-- el value deberia ser props.Stock --> */}
                                 </div>
                                 <div className="col-lg-12 mt-3">
-
-                                    <ItemCount stock={props.Stock} nombre={props.Nombre} />
+                                    {mostrar}
+                                    {/* <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> */}
                                 </div>
                             </div>
                         </div>

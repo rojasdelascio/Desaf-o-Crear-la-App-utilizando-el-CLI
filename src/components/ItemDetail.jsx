@@ -72,7 +72,7 @@ function ItemDetail(props) {
                                 </div>
                                 <div className="col-lg-12 mt-3">
 
-                                    {contador === 0 ? <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> : <Link className="btn btn-primary" to='/cart'><h6>Añadiste {contador} Items,</h6> <h2>¡Ir al carrito!</h2></Link>}
+                                    {contador === 0 ? <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> : <Link className="btn btn-success" to='/cart'><h6>Añadiste {contador} Items,</h6> <h2>¡Ir al carrito!</h2></Link>}
                                     {console.log(contador)}
                                 </div>
                             </div>

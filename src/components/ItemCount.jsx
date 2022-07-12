@@ -31,10 +31,10 @@ function ItemCount(props) {
 
             <button onClick={resta} type="button" className="btn btn-secondary">-</button>
             {/* <button type="button" className="btn btn-secondary">{count}</button> */}
-            <input value={count} />
+            <input className="input" value={count} />
             <button onClick={suma} type="button" className="btn btn-secondary">+</button>
-            <button type="button" onClick={() => onAddLocal(count)} className="btn btn-secondary">Añadir al carrito</button>
-            <Link type="button" className="btn btn-success" to='/cart'  >Ir al carrito</Link>
+            <button type="button" onClick={() => onAddLocal(count)} className="btn btn-success" >Añadir al carrito</button>
+
             {/* <Link>
                 <button onClick={onAdd} type="button" className="btn btn-success">Añadir al carrito</button></Link> */}
             <button onClick={reiniciar} type="button" class="btn btn-primary">Reiniciar</button>

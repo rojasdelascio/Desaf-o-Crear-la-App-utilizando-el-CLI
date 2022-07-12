@@ -1,7 +1,11 @@
 .btn-group {
     padding-bottom: 1rem;
-    max-width: 4rem;
-    max-height: 3rem;
+    max-width: 10rem;
+    max-height: 6rem;
     position: relative;
-    right: -5%;
+    right: 10%;
+}
+
+.input {
+    max-width: 3rem;
 }

@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 function ItemDetail(props) {
 
     const [contador, setContador] = useState(0);
+
     let imagen = `/${props.URL}`;
 
 
@@ -18,11 +19,6 @@ function ItemDetail(props) {
         console.log(contador);
     }
 
-    const mostrar = () => {
-        console.log('contador en itemdetails')
-        console.log(contador);
-        contador == 0 ? <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> : <Link to='/cart'>Ir al carrito</Link>
-    }
 
     return (
 
@@ -75,8 +71,9 @@ function ItemDetail(props) {
                                     {/* <!-- el value deberia ser props.Stock --> */}
                                 </div>
                                 <div className="col-lg-12 mt-3">
-                                    {mostrar}
-                                    {/* <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> */}
+
+                                    {contador === 0 ? <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> : <Link className="btn btn-primary" to='/cart'><h6>Añadiste {contador} Items,</h6> <h2>¡Ir al carrito!</h2></Link>}
+                                    {console.log(contador)}
                                 </div>
                             </div>
                         </div>

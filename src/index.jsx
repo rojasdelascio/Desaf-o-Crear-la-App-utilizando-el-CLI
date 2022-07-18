@@ -6,14 +6,21 @@ import reportWebVitals from './reportWebVitals';
 import * as bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom'
+// DUDA: lo que importas abajo es la funcion que tiene las funciones adentro, ¿es cierto esto? 
+//DUDA: OJO: NO importas a la constante =react.createContext
+import { CartProvider } from './components/Context/CartContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </BrowserRouter>
-  </React.StrictMode>
+
+  </React.StrictMode >
 );
 
 // If you want to start measuring performance in your app, pass a function

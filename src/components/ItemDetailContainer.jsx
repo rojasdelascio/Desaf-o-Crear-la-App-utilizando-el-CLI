@@ -1,9 +1,10 @@
 import './ItemDetailContainer.css';
 import { arrayProductos } from '../data/productos';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import ItemDetail from './ItemDetail';
 import { Route, Routes, Link, useParams } from 'react-router-dom';
 import Item from './Item';
+import CartContexto from './Context/CartContext';
 
 
 
@@ -36,6 +37,7 @@ function ItemDetailContainer() {
 
     return (
         <>
+
             {/* <ItemDetail {...itemDetails} /> */}
             < ItemDetail {...itemDetails} />
 

@@ -1,13 +1,33 @@
 import ItemCount from "./ItemCount";
+import React from 'react';
 import { useState, useEffect } from 'react';
+import { useContext } from 'react';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
-
-
+import { useCart } from './Context/CartContext';
 
 function ItemDetail(props) {
+    const propsLocal = props;
+
+    //duda:¿Que pasa si aca ponia const cart=useContext(CartContext) e importaba el contexto, ¿es lo mismo?
+    //por que en otros ejemplos importan funcion por funcion tipo const {addToCart}=useContext(CartContext)?
+    const carrito = useCart();
+
 
     const [contador, setContador] = useState(0);
+
+
+    class itemNuevo {
+        constructor(id, nombre, precio, disponible, cantidad) {
+            this.id = id;
+            this.name = nombre;
+            this.price = precio;
+            this.stock = disponible;
+            this.quantity = cantidad;
+
+        }
+    }
+
 
     let imagen = `/${props.URL}`;
 
@@ -15,9 +35,13 @@ function ItemDetail(props) {
     const onAdd = (input) => {
 
         setContador(input);
-        console.log('contador en ITemdetail')
-        console.log(contador);
+        const itemPrueba = new itemNuevo(props.id, props.Nombre, props.Precio, props.Stock, input)
+
+        carrito.addItem(itemPrueba, input);
+
+
     }
+
 
 
     return (
@@ -71,9 +95,9 @@ function ItemDetail(props) {
                                     {/* <!-- el value deberia ser props.Stock --> */}
                                 </div>
                                 <div className="col-lg-12 mt-3">
-
+                                    {/* Tengo que arreglar que abajo aparezca un error si se inteta añadir mas que el stock de acuerdo a la sumatoria de CartContext */}
                                     {contador === 0 ? <ItemCount onAdd={onAdd} stock={props.Stock} nombre={props.Nombre} /> : <Link className="btn btn-success" to='/cart'><h6>Añadiste {contador} Items,</h6> <h2>¡Ir al carrito!</h2></Link>}
-                                    {console.log(contador)}
+
                                 </div>
                             </div>
                         </div>

@@ -1,0 +1,16 @@
+#div-inputtotal {
+    width: 15%;
+    padding: 2rem;
+}
+
+#limpiarcarrito {
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.itemscarrito {}
+
+.nohayitems {
+    padding: 3rem;
+    margin: 6rem;
+}

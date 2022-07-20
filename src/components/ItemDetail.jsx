@@ -18,11 +18,12 @@ function ItemDetail(props) {
 
 
     class itemNuevo {
-        constructor(id, nombre, precio, disponible, cantidad) {
+        constructor(id, nombre, precio, disponible, URL, cantidad) {
             this.id = id;
             this.name = nombre;
             this.price = precio;
             this.stock = disponible;
+            this.link = URL;
             this.quantity = cantidad;
 
         }
@@ -35,11 +36,9 @@ function ItemDetail(props) {
     const onAdd = (input) => {
 
         setContador(input);
-        const itemPrueba = new itemNuevo(props.id, props.Nombre, props.Precio, props.Stock, input)
+        const itemPrueba = new itemNuevo(props.id, props.Nombre, props.Precio, props.Stock, props.URL, input)
 
         carrito.addItem(itemPrueba, input);
-
-
     }
 
 

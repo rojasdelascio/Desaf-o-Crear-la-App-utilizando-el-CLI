@@ -3,6 +3,7 @@ import ItemList from './ItemList';
 import { arrayProductos } from '../data/productos';
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { getFirestore, doc, getDoc, collection, getDocs } from 'firebase/firestore';
 
 function ItemListContainer(props) {
 
@@ -11,25 +12,46 @@ function ItemListContainer(props) {
     let { tipo } = useParams();
 
 
-    const obtenerItems = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                const myData = tipo ? arrayProductos.filter((item) => item.Tipo === tipo) : arrayProductos;
+    //FIREBASE
+    // const obtenerItems = () => {
+    //     return new Promise((resolve, reject) => {
+    //         setTimeout(() => {
+    //             const myData = tipo ? arrayProductos.filter((item) => item.Tipo === tipo) : arrayProductos;
 
-                resolve(myData);
-            }, 500);
-        }
-        )
-    }
+    //             resolve(myData);
+    //         }, 500);
+    //     }
+    //     )
+    // }
 
+
+    // useEffect(() => {
+    //     obtenerItems()
+
+    //         .then(res => setItems(res))
+    //         .catch(err => console.log(err))
+    // }, [tipo])
 
     useEffect(() => {
-        obtenerItems()
+        const db = getFirestore();
+        const productosRef = collection(db, "productos");
 
-            .then(res => setItems(res))
-            .catch(err => console.log(err))
+        getDocs(productosRef).then((snapshot) => {
+            if (tipo) {
+                let itemsTemp = snapshot.docs.filter((doc) => doc.data().Tipo == tipo)
+                setItems(itemsTemp.map(doc => doc.data()));
+                console.log('items filtrados', items);
+
+            } else {
+                setItems(snapshot.docs.map(doc => doc.data()));
+                console.log('items NO filtrados', items);
+            }
+
+        })
     }, [tipo])
 
+
+    //FIN FIREBASE
 
     return (
         <div className="div-bienvenida">

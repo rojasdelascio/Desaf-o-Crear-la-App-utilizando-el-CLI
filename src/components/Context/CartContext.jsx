@@ -70,7 +70,7 @@ export const CartProvider = ({ children }) => {
         const cartCopia2 = cart.slice(0)
         cartCopia2.forEach(i => {
             if (i.id === id) {
-                if (i.quantity > 0) {
+                if (i.quantity >= 0) {
                     if (i.quantity < i.stock)
                         i.quantity = i.quantity + 1;
                 }

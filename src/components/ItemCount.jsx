@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function ItemCount(props) {
-    const [count, setItemCount] = useState(0);
+    const [count, setItemCount] = useState(1);
     const suma = () => {
         if (count < props.stock) { setItemCount(count + 1) }
     }
 
     const resta = () => {
-        if (count > 0) { setItemCount(count - 1) }
+        if (count > 1) { setItemCount(count - 1) }
     }
 
     const reiniciar = () => {
@@ -20,6 +20,7 @@ function ItemCount(props) {
     const onAddLocal = (input) => {
 
         props.onAdd(input);
+
         setItemCount(0);
     }
     // const onAdd = () => {

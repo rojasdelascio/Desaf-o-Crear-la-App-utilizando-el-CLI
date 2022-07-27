@@ -9,13 +9,13 @@ import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import AddUsername from './Addusername';
 
 function Cart() {
-    const [cont, setCont] = useState(0);
+
 
     const arrayCarrito = useCart();
-    console.log('DESDECART', arrayCarrito);
+
 
     const arrayCarritoLocal = arrayCarrito.cart;
-    console.log('DESDECART', arrayCarritoLocal);
+
 
     const noHayItems = () => {
 

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from './Context/CartContext';
 import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import swal from 'sweetalert';
+import { useEffect } from 'react';
 
 
 function AddUsername() {
@@ -15,10 +16,17 @@ function AddUsername() {
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
     const [email, setEmail] = useState("");
+    const [telefono, setTelefono] = useState(0);
     const [cont, setCont] = useState(0);
+    const [numNewOrden, setNumNewOrden] = useState("");
+
 
     const nombreChangeHandler = (event) => {
         setNombre(event.target.value);
+    }
+
+    const telefonoChangeHandler = (event) => {
+        setTelefono(event.target.value);
     }
 
     const apellidoChangeHandler = (event) => {
@@ -33,68 +41,101 @@ function AddUsername() {
     const completarOrden = () => {
 
         const order = {
-            //CHEQUEAR SI FUNCIONA
             buyer: { name: nombre, lastname: apellido, Email: email },
             items: [...arrayCarrito.cart],
             precioTotal: arrayCarrito.getTotalPrice(),
-            //CHEQUEAR SI FUNCIONA
             fecha: new Date()
         };
 
         const db = getFirestore();
         const orderCollection = collection(db, "orders")
-        addDoc(orderCollection, order)
+        addDoc(orderCollection, order).then((doc) => {
+            let ordenVar = "";
+            setNumNewOrden(doc.id);
+            ordenVar = doc.id;
+            console.log('Número de orden', ordenVar);
+        })
 
-        arrayCarrito.clear();
-        setNombre("");
-        setApellido("");
-        setEmail("");
+
+        // arrayCarrito.clear();
+        // setNombre("");
+        // setApellido("");
+        // setEmail("");
 
     }
 
+
     const alert = () => {
 
-        if (nombre && apellido && email) {
+        if (nombre && apellido && email && telefono) {
             swal({
                 title: "Estás por completar tu orden",
                 text: "No podrás cancelar esta orden luego de proseguir",
+                text: `Por favor valida tus datos primero: \n Nombre: ${nombre} \n Apellido: ${apellido} \n Telefono:${telefono} \n Correo: ${email}`,
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,
             })
                 .then((willDelete) => {
                     if (willDelete) {
-                        swal("¡Tu orden ha sido procesada, felicidades! Recibirás un correo con tu número de orden", {
+                        completarOrden();
+
+                        swal(`¡Tu orden ha sido procesada, felicidades!`, {
                             icon: "success",
                         });
-                        completarOrden();
+
                     } else {
                         swal("Puedes continuar comprando. No se ha procesado tu orden");
                     }
                 });
         } else {
-            swal("Debes completar los campos 'Nombre', 'Apellido' y 'Correo' para poder completar la orden", {
+            swal("Debes completar los campos 'Nombre', 'Apellido', 'Correo' Y 'Telefono' para poder completar la orden", {
                 className: "red-bg",
             });
         }
 
     }
 
+    useEffect(() => {
+
+        if (numNewOrden) {
+
+            swal(`Tu numero de orden es ${numNewOrden}`, {
+                icon: "success",
+            });
+
+            console.log(`Numero de orden en el estado: ${numNewOrden}`)
+
+            arrayCarrito.clear();
+            setNombre("");
+            setApellido("");
+            setEmail("");
+        }
+
+    }, [numNewOrden])
+
+
+
+
     const arrayCarrito = useCart();
 
     return (
-        <div className="div-cart">
+        <div className="formularioCompra">
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="" value={nombre} onChange={nombreChangeHandler} aria-describedby="basic-addon1" />
+                Nombre <input type="text" class="form-control" placeholder="Nombre" aria-label="" value={nombre} onChange={nombreChangeHandler} aria-describedby="basic-addon1" />
             </div>
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Apellido" aria-label="Recipient's username" onChange={apellidoChangeHandler} value={apellido} aria-describedby="basic-addon2" />
+                Apellido <input type="text" class="form-control" placeholder="Apellido" aria-label="Recipient's username" onChange={apellidoChangeHandler} value={apellido} aria-describedby="basic-addon2" />
             </div>
 
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Correo electrónico" aria-label="" onChange={emailChangeHandler} value={email} aria-describedby="basic-addon1" />
+                Correo Electrónico <input type="email" class="form-control" placeholder="Correo electrónico: hola@email.com" aria-label="" onChange={emailChangeHandler} value={email} aria-describedby="basic-addon1" />
+            </div>
+
+            <div class="input-group mb-3">
+                Numero Telefónico <input type="number" class="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
             </div>
 
             <button class="btn btn-outline-secondary" onClick={alert} type="button">Completar orden</button>

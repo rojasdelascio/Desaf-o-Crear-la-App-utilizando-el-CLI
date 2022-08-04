@@ -122,23 +122,23 @@ function AddUsername() {
     return (
         <div className="formularioCompra">
 
-            <div class="input-group mb-3">
-                Nombre <input type="text" class="form-control" placeholder="Nombre" aria-label="" value={nombre} onChange={nombreChangeHandler} aria-describedby="basic-addon1" />
+            <div className="input-group mb-3" id="formularioCompra__nombre">
+                <h5 className="formularioCompra__h5">Nombre </h5><input id="formularioCompra__nombreyapellido__input" type="text" class="form-control" placeholder="Nombre" aria-label="" value={nombre} onChange={nombreChangeHandler} aria-describedby="basic-addon1" />
             </div>
 
-            <div class="input-group mb-3">
-                Apellido <input type="text" class="form-control" placeholder="Apellido" aria-label="Recipient's username" onChange={apellidoChangeHandler} value={apellido} aria-describedby="basic-addon2" />
+            <div className="input-group mb-3" id="formularioCompra__apellido">
+                <h5 className="formularioCompra__h5"> Apellido</h5> <input id="formularioCompra__nombreyapellido__input" type="text" class="form-control" placeholder="Apellido" aria-label="Recipient's username" onChange={apellidoChangeHandler} value={apellido} aria-describedby="basic-addon2" />
             </div>
 
-            <div class="input-group mb-3">
-                Correo Electrónico <input type="email" class="form-control" placeholder="Correo electrónico: hola@email.com" aria-label="" onChange={emailChangeHandler} value={email} aria-describedby="basic-addon1" />
+            <div className="input-group mb-3" id="formularioCompra__email">
+                <h5 className="formularioCompra__h5"> Correo Electronico</h5> <input id="formularioCompra__email__input" type="email" class="form-control" placeholder="Correo electrónico: hola@email.com" aria-label="" onChange={emailChangeHandler} value={email} aria-describedby="basic-addon1" />
             </div>
 
-            <div class="input-group mb-3">
-                Numero Telefónico <input type="number" class="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
+            <div className="input-group mb-3" id="formularioCompra__telefono">
+                <h5 className="formularioCompra__h5"> Numero Telefónico </h5><input id="formularioCompra__telefono__input" type="number" class="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
             </div>
 
-            <button class="btn btn-outline-secondary" onClick={alert} type="button">Completar orden</button>
+            <button className="btn btn-outline-secondary" onClick={alert} type="button">Completar orden</button>
 
 
 

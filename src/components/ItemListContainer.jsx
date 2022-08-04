@@ -33,7 +33,7 @@ function ItemListContainer(props) {
     return (
         <div className="div-bienvenida">
             <h2 className="texto-bienvenida">{props.texto}</h2>
-
+            {props.intro}
             <ItemList array={items} />
 
         </div >

@@ -11,7 +11,7 @@ function ItemDetail(props) {
 
     //duda:¿Que pasa si aca ponia const cart=useContext(CartContext) e importaba el contexto, ¿es lo mismo?
     //por que en otros ejemplos importan funcion por funcion tipo const {addToCart}=useContext(CartContext)?
-    const carrito = useCart();
+    const carrito = useCart("");
 
 
     const [contador, setContador] = useState(0);

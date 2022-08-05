@@ -55,7 +55,7 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    
+
 
     const disminuirItem = (id) => {
         const cartCopia = cart.slice(0)

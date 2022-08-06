@@ -103,33 +103,7 @@ function ItemDetail(props) {
                     </div>
                 </div>
             </div>
-            {/* <!-- <div className="row">
-                                        <div className="col-lg-12 text-center pt-3">
-                                            <h4>More Product</h4>
-                                        </div>
-                                    </div>
-                                    <div className="row mt-3 p-0 text-center pro-box-section">
-                                        <div className="col-lg-3 pb-2">
-                                            <div className="pro-box border p-0 m-0">
-                                                <img src="">
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 pb-2">
-                                            <div className="pro-box border p-0 m-0">
-                                                <img src="">
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 pb-2">
-                                            <div className="pro-box border p-0 m-0">
-                                                <img src="">
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 pb-2">
-                                            <div className="pro-box border p-0 m-0">
-                                                <img src="">
-                                            </div>
-                                        </div>
-                                    </div> --> */}
+
         </div>
 
 

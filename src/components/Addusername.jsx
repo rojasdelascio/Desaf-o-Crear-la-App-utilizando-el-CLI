@@ -67,7 +67,13 @@ function AddUsername() {
 
     const alert = () => {
 
-        if (nombre && apellido && email && telefono) {
+        if (email.indexOf("@") == -1 && email.indexOf(".") == -1) {
+            swal("Recuerda que el correo debe tener un formato similar a 'correo@dominio.com'", {
+                className: "red-bg",
+            });
+
+        }
+        else if (nombre && apellido && email && telefono) {
             swal({
                 title: "Estás por completar tu orden",
                 text: "No podrás cancelar esta orden luego de proseguir",

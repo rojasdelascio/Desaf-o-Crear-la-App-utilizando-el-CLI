@@ -5,12 +5,12 @@ import { Route, Routes, Link, useParams } from 'react-router-dom';
 import Item from './Item';
 import CartContexto from './Context/CartContext';
 import { getFirestore, doc, getDoc, collection, getDocs } from 'firebase/firestore';
-
+import LoadingSpinner from './Loading';
 
 
 function ItemDetailContainer() {
 
-
+    const [isLoading, setIsLoading] = useState(true);
     const [itemDetails, setItemDetails] = useState([]);
     let { detalleID } = useParams();
     console.log('DETALLEOD', detalleID)
@@ -24,7 +24,7 @@ function ItemDetailContainer() {
                 console.log(detalleID)
                 let itemsTemp = snapshot.docs.find((doc) => doc.data().id == detalleID)
                 setItemDetails(itemsTemp.data());
-
+                setIsLoading(false);
 
             }
         })
@@ -33,8 +33,8 @@ function ItemDetailContainer() {
 
     return (
         <>
-
-            < ItemDetail {...itemDetails} />
+            {isLoading ? <LoadingSpinner /> : < ItemDetail {...itemDetails} />}
+            {/* {itemDetails ? < ItemDetail {...itemDetails} /> : <LoadingSpinner />} */}
 
         </>
 

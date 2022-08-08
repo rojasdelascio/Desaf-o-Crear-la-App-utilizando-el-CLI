@@ -2,6 +2,8 @@ import React, { useEffect, useMemo } from 'react'
 import { useContext } from 'react';
 import { useState } from 'react'
 
+
+
 // DUDA:  ¿se tiene que llamar esta constante igual que el archivo?
 export const CartContext = React.createContext();
 
@@ -54,6 +56,7 @@ export const CartProvider = ({ children }) => {
     }
 
 
+
     const disminuirItem = (id) => {
         const cartCopia = cart.slice(0)
         cartCopia.forEach(i => {
@@ -70,7 +73,7 @@ export const CartProvider = ({ children }) => {
         const cartCopia2 = cart.slice(0)
         cartCopia2.forEach(i => {
             if (i.id === id) {
-                if (i.quantity > 0) {
+                if (i.quantity >= 0) {
                     if (i.quantity < i.stock)
                         i.quantity = i.quantity + 1;
                 }

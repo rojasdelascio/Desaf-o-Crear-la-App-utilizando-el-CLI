@@ -5,8 +5,26 @@ function Intro() {
     return (
         <>
 
-            <p>Bienvenido a INDIE-ARG</p>
-            <p>Vendemos producciones de artistas independientes latinoamericanos</p>
+            <div className="container">
+                <div className="row">
+                    <div class="col">
+                        <h2 className="intro-titulo">Bienvenido a INDIE-ARG</h2>
+                    </div>
+
+                </div>
+
+                <div id="intro-textoeimagen" className="row">
+                    <div className="col">
+                        <p className="intro-text">Gracias por visitarnos. Promovemos el arte latinoamericano. Apoya a nuestros artistas comprando alguna de sus producciones</p>
+
+                    </div>
+                    <div className="col">
+
+                        <section id="fotos__index" />
+
+                    </div>
+                </div>
+            </div>
 
 
         </>

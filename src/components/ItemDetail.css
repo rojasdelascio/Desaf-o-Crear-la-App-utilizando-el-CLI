@@ -8,6 +8,22 @@ body {
     color: #ab8181;
 }
 
+.detalle-titulo1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#detalle-titulo2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+#detalles-detalles {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+
 .main-section {
     position: absolute;
     left: 50%;

@@ -12,8 +12,6 @@ function Cart() {
 
 
     const arrayCarrito = useCart("");
-
-
     const arrayCarritoLocal = arrayCarrito.cart;
 
 
@@ -39,17 +37,15 @@ function Cart() {
             <h2>Bienvenido al carrito</h2>
             <p>Observa abajo los items que has agregado hasta ahora</p>
             {/* {arrayCarritoLocal.map((x) => < CartItem className="items" id={x.id} name={x.name} price={x.price} quantity={x.quantity} URL={x.link} />)} */}
-            {arrayCarrito.cart.length > 0 ? siHayItems() : noHayItems()}
+            <div className="div-itemscarrito">
+                {arrayCarrito.cart.length > 0 ? siHayItems() : noHayItems()}
+            </div>
             {arrayCarrito.cart.length > 0 ? <AddUsername /> : <></>}
-            {arrayCarrito.cart.length > 0 ? <><div id="div-inputtotal" className="input-group input-group-lg"><div className="input-group-prepend"><span className="input-group-text" id="inputGroup-sizing-lg">Precio Total</span></div><input onChange={handleChange} type="text" className="form-control" value={arrayCarrito.getTotalPrice()} aria-label="Large" aria-describedby="inputGroup-sizing-sm" disabled /></div><button onClick={() => { arrayCarrito.clear() }} type="button" className="btn btn-danger" id="limpiarcarrito">Limpiar Carrito</button></> : <></>}
-
-
+            {arrayCarrito.cart.length > 0 ? <div className="preciototal-y-limpiarcarrito"><div id="div-inputtotal" className="input-group input-group-lg"><span className="input-group-text" id="preciototal-texto">Precio Total</span><input onChange={handleChange} id="preciototal-precio" type="number" className="input-group-text" value={arrayCarrito.getTotalPrice()} disabled /></div><button onClick={() => { arrayCarrito.clear() }} type="button" className="btn btn-danger" id="limpiarcarrito">Limpiar Carrito</button></div> : <></>}
 
         </>
 
     )
-
-
 
 }
 

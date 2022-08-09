@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from './Context/CartContext';
 import { getFirestore, addDoc, collection } from 'firebase/firestore';
 import swal from 'sweetalert';
+import './Addusername.css';
 import { useEffect } from 'react';
 
 
@@ -67,7 +68,8 @@ function AddUsername() {
 
     const alert = () => {
 
-        if (email.indexOf("@") == -1 && email.indexOf(".") == -1) {
+        if (email.indexOf('@' + '.') == -1) {
+
             swal("Recuerda que el correo debe tener un formato similar a 'correo@dominio.com'", {
                 className: "red-bg",
             });
@@ -129,22 +131,22 @@ function AddUsername() {
         <div className="formularioCompra">
 
             <div className="input-group mb-3" id="formularioCompra__nombre">
-                <h5 className="formularioCompra__h5">Nombre </h5><input id="formularioCompra__nombreyapellido__input" type="text" class="form-control" placeholder="Nombre" aria-label="" value={nombre} onChange={nombreChangeHandler} aria-describedby="basic-addon1" />
+                <h5 className="formularioCompra__h5">Nombre </h5><input id="formularioCompra__nombreyapellido__input" type="text" className="form-control" placeholder="Nombre" aria-label="" value={nombre} onChange={nombreChangeHandler} aria-describedby="basic-addon1" />
             </div>
 
             <div className="input-group mb-3" id="formularioCompra__apellido">
-                <h5 className="formularioCompra__h5"> Apellido</h5> <input id="formularioCompra__nombreyapellido__input" type="text" class="form-control" placeholder="Apellido" aria-label="Recipient's username" onChange={apellidoChangeHandler} value={apellido} aria-describedby="basic-addon2" />
+                <h5 className="formularioCompra__h5"> Apellido</h5> <input id="formularioCompra__nombreyapellido__input" type="text" className="form-control" placeholder="Apellido" aria-label="Recipient's username" onChange={apellidoChangeHandler} value={apellido} aria-describedby="basic-addon2" />
             </div>
 
             <div className="input-group mb-3" id="formularioCompra__email">
-                <h5 className="formularioCompra__h5"> Correo Electronico</h5> <input id="formularioCompra__email__input" type="email" class="form-control" placeholder="Correo electrónico: hola@email.com" aria-label="" onChange={emailChangeHandler} value={email} aria-describedby="basic-addon1" />
+                <h5 className="formularioCompra__h5"> Correo Electronico</h5> <input id="formularioCompra__email__input" type="email" className="form-control" placeholder="Correo electrónico: hola@email.com" aria-label="" onChange={emailChangeHandler} value={email} aria-describedby="basic-addon1" />
             </div>
 
             <div className="input-group mb-3" id="formularioCompra__telefono">
-                <h5 className="formularioCompra__h5"> Numero Telefónico </h5><input id="formularioCompra__telefono__input" type="number" class="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
+                <h5 className="formularioCompra__h5"> Numero Telefónico </h5><input id="formularioCompra__telefono__input1" type="number" className="form-control" placeholder="Cod. Area" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" /><input id="formularioCompra__telefono__input" type="number" class="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
             </div>
 
-            <button className="btn btn-outline-secondary" onClick={alert} type="button">Completar orden</button>
+            <button id="formularioCompra__boton" className="btn btn-outline-secondary" onClick={alert} type="button">Completar orden</button>
 
 
 

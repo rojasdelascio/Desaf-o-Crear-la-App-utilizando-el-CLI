@@ -1,13 +1,76 @@
-.formularioCompra {}
+.formularioCompra {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    right: -35%;
+}
 
-#formularioCompra__apellido {}
+#formularioCompra__apellido {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
 
-#formularioCompra__nombre {}
+#formularioCompra__nombre {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
 
-#formularioCompra__email {}
+#formularioCompra__email {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
 
-#formularioCompra__telefono {}
+#formularioCompra__telefono {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
 
-.formularioCompra__h5 {}
+.formularioCompra__h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
 
-#formularioCompra__nombreyapellido__input {}
+#formularioCompra__nombreyapellido__input {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin-left: 1rem;
+    max-width: 20%;
+}
+
+#formularioCompra__email__input {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin-left: 1rem;
+    max-width: 20%;
+}
+
+#formularioCompra__telefono__input {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin-left: 1rem;
+    max-width: 20%;
+}
+
+#formularioCompra__telefono__input1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin-left: 1rem;
+    max-width: 10%;
+}
+
+
+/* .btn,
+.btn-outline-secondary {
+    background-color: rgb(165, 109, 217);
+} */
+
+#formularioCompra__boton {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin-left: 1rem;
+    max-width: 30%;
+    background-color: rgb(0, 186, 3);
+    border-color: rgb(0, 186, 3);
+    color: rgb(255, 255, 255);
+}

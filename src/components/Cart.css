@@ -1,11 +1,12 @@
 #div-inputtotal {
-    width: 15%;
     padding: 2rem;
 }
 
 #limpiarcarrito {
-    margin: 2rem;
+    margin: 1rem;
     padding: 1rem;
+    max-width: 22%;
+    position: relative;
 }
 
 .itemscarrito {}
@@ -13,4 +14,33 @@
 .nohayitems {
     padding: 3rem;
     margin: 6rem;
+}
+
+.div-itemscarrito {
+    margin: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.preciototal-y-limpiarcarrito {
+    position: relative;
+    right: -40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+#preciototal-texto {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+#preciototal-precio {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    max-width: 10%;
+    background-color: rgba(0, 196, 36, 0.763);
 }

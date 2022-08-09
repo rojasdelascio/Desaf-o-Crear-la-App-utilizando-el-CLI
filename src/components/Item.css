@@ -1,8 +1,22 @@
 .card {
     width: 30%;
     max-height: 35rem;
-    margin: 0.5rem;
+    margin: 1.2rem;
     padding: 0.5rem;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+.card-tipo {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bold;
+    padding-top: -10px;
 }
 
 .card-body {
@@ -19,4 +33,18 @@
 .card-text {
     height: 10%;
     overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3rem;
+    padding: 0;
 }
+
+
+/* .intro-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.intro-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+} */

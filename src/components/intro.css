@@ -1,0 +1,46 @@
+.intro-titulo {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 260%;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    color: aqua;
+    text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+.intro-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 180%;
+}
+
+#fotos__index {
+    background-image: url("../../public/img/index__bg__form2-1.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    -webkit-animation: 4s ease-in-out 0s infinite normal change__back;
+    animation: 4s ease-in-out 0s infinite normal change__back;
+}
+
+#intro-textoeimagen {
+    margin: 2rem;
+    padding: 2rem;
+    min-height: 20rem;
+}
+
+@keyframes change__back {
+    0% {
+        background-image: url(../../public/img/index__bg__form1-1.png)
+    }
+    50% {
+        background-image: url(../../public/img/index__bg__form2-1.png)
+    }
+    75% {
+        background-image: url(../../public/img/index__bg__form3-1.png)
+    }
+    100% {
+        background-image: url(../../public/img/index__bg__form1-1.png)
+    }
+}

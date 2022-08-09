@@ -9,7 +9,25 @@ import { BrowserRouter } from 'react-router-dom'
 // DUDA: lo que importas abajo es la funcion que tiene las funciones adentro, ¿es cierto esto? 
 //DUDA: OJO: NO importas a la constante =react.createContext
 import { CartProvider } from './components/Context/CartContext';
+//FIREBASE
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBLoeCx0a5J1qpcUa11ynEtO1zIr5KTLCU",
+  authDomain: "indie-arg.firebaseapp.com",
+  projectId: "indie-arg",
+  storageBucket: "indie-arg.appspot.com",
+  messagingSenderId: "394169536591",
+  appId: "1:394169536591:web:b5010746afc7f9eff7da3a"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+//FIREBASEND
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

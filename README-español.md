@@ -8,7 +8,7 @@ http://independiente-arg.com es una tienda online, en la que se puede adquirir c
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
-## Pre-requisitos 📋
+## Instalación 🔧
 
 #### Abajo encontrarás los requisitos para instalar todas las librerías y dependencias correspondientes, y poder así correr la aplicación de forma óptima. 
 
@@ -110,43 +110,27 @@ Luego, se debe importar la misma en el sitio.
 import swal from 'sweetalert';
 ```
 
-## Instalación 🔧
+## Correr Proyecto 🔧
 
-*Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose*
+En el directorio del proyecto, correr
 
-*Dí cómo será ese paso*
+### `npm start`
 
-```
-Da un ejemplo
-```
+Esto corre la aplicación en modo de development.\
+Abrir [http://localhost:3000](http://localhost:3000) para observar la aplicación en tu browser.
 
-*Y repite*
+La página se refrescará cuando realices cambios.\
+Podrás también observar la lista de errores en la cónsola
 
-```
-hasta finalizar
-```
+### `npm run build`
 
-*Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo*
+Construye la aplicación para producción, en el directorio `build` \
+Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
-## Ejecutando las pruebas ⚙️
+### `npm test`
 
-*Explica como ejecutar las pruebas automatizadas para este sistema*
+Inicia el corredor de prueba en el modo de reloj interactivo.\
 
-### Analice las pruebas end-to-end 🔩
-
-*Explica que verifican estas pruebas y por qué*
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-*Explica que verifican estas pruebas y por qué*
-
-```
-Da un ejemplo
-```
 
 ## Despliegue 📦
 
@@ -164,26 +148,10 @@ npm run deploy
 - [Maven](https://maven.apache.org/) - Manejador de dependencias
 - [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
 
-## Contribuyendo 🖇️
-
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-## Wiki 📖
-
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
-
-## Versionado 📌
-
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
-
 ## Autores ✒️
 
 - **Gustavo Rojas** - *Trabajo Inicial* - [GustavoRojas](https://github.com/rojasdelascio/INDIEARG-Rojas-Delascio.git)
 - **Gustavo Rojas** - *Documentación* - [GustavoRojas](https://github.com/rojasdelascio/INDIEARG-Rojas-Delascio.git)
-
-## Licencia 📄
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](https://gist.github.com/Villanuevand/LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 

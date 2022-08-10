@@ -9,7 +9,6 @@ function CartItem(props) {
     const imgto = `/${props.URL}`
 
     const carrito = useCart("");
-    console.log('carricarritoo', carrito);
 
     const quantityCondition = (i) => {
         return i.id === props.id

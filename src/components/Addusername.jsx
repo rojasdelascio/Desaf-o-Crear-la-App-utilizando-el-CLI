@@ -20,7 +20,7 @@ function AddUsername() {
     const [telefono, setTelefono] = useState(0);
     const [cont, setCont] = useState(0);
     const [numNewOrden, setNumNewOrden] = useState("");
-
+    const [codArea, setCodArea] = useState(0);
 
     const nombreChangeHandler = (event) => {
         setNombre(event.target.value);
@@ -28,6 +28,10 @@ function AddUsername() {
 
     const telefonoChangeHandler = (event) => {
         setTelefono(event.target.value);
+    }
+
+    const codAreaChangeHandler = (event) => {
+        setCodArea(event.target.value);
     }
 
     const apellidoChangeHandler = (event) => {
@@ -68,12 +72,20 @@ function AddUsername() {
 
     const alert = () => {
 
-        if (email.indexOf('@' + '.') == -1) {
+        if ((email.indexOf('@') == -1) || (email.indexOf('.') == -1)) {
 
             swal("Recuerda que el correo debe tener un formato similar a 'correo@dominio.com'", {
                 className: "red-bg",
             });
 
+        } else if (telefono.length != 8) {
+            swal("Formato incorrecto de telefono. Recuerda colocar el codigo de área en el primer campo, y un número de 8 dígitos en el segundo campo", {
+                className: "red-bg",
+            });
+        } else if (codArea.length == 0) {
+            swal("Formato incorrecto de telefono. Recuerda colocar el código de área en el primer campo", {
+                className: "red-bg",
+            });
         }
         else if (nombre && apellido && email && telefono) {
             swal({
@@ -143,7 +155,7 @@ function AddUsername() {
             </div>
 
             <div className="input-group mb-3" id="formularioCompra__telefono">
-                <h5 className="formularioCompra__h5"> Numero Telefónico </h5><input id="formularioCompra__telefono__input1" type="number" className="form-control" placeholder="Cod. Area" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" /><input id="formularioCompra__telefono__input" type="number" class="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
+                <h5 className="formularioCompra__h5"> Numero Telefónico </h5><input id="formularioCompra__telefono__input1" type="number" className="form-control" placeholder="Cod. Area" onChange={codAreaChangeHandler} value={codArea} aria-label="" aria-describedby="basic-addon1" /><input id="formularioCompra__telefono__input" type="number" className="form-control" placeholder="Telefono" aria-label="" onChange={telefonoChangeHandler} value={telefono} aria-describedby="basic-addon1" />
             </div>
 
             <button id="formularioCompra__boton" className="btn btn-outline-secondary" onClick={alert} type="button">Completar orden</button>

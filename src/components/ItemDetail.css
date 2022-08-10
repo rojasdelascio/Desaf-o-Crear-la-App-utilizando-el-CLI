@@ -33,12 +33,13 @@ body {
 
 .left-side-product-box img {
     width: 100%;
+    min-width: 20%;
 }
 
 .left-side-product-box .sub-img img {
     margin-top: 5px;
-    width: 83px;
-    height: 100px;
+    /* width: 83px;
+    height: 100px; */
 }
 
 .right-side-pro-detail span {
@@ -64,8 +65,77 @@ body {
     height: 200px;
 }
 
-@media (min-width:360px) and (max-width:640px) {
-    .pro-box-section .pro-box img {
-        height: auto;
+#container-detalles {
+    min-width: 20%;
+}
+
+@media (min-width:640px) and (max-width:992px) {
+    #container-detalles1 {}
+    #container-detalles2 {
+        width: 500px;
+    }
+    #filaunica {}
+    #columnaimagen {
+        width: 450px;
+    }
+    #columnamacrodetalles {
+        width: 200px;
+        min-width: 150px;
+    }
+    #columnamacrodetalles-divinterno {
+        width: 450px;
+        min-width: 150px;
+    }
+    /* #filanombre {}
+   
+    #filaprecio {}
+    #filadetalles {}
+    #filatipo {}
+    #filastock {} */
+    #filaitemcount {
+        width: 50px;
+    }
+}
+
+@media (min-width:480px) and (max-width:640px) {
+    #container-detalles1 {}
+    #container-detalles2 {
+        width: 450px;
+    }
+    #filaunica {}
+    #columnaimagen {
+        width: 400px;
+    }
+    #columnamacrodetalles {
+        width: 200px;
+        min-width: 150px;
+    }
+    #columnamacrodetalles-divinterno {
+        width: 400px;
+        min-width: 150px;
+    }
+    #filaitemcount {
+        width: 50px;
+    }
+}
+
+@media (min-width:0px) and (max-width:479px) {
+    #container-detalles1 {}
+    #container-detalles2 {
+        width: 250px;
+        height: 1120px;
+    }
+    #filaunica {}
+    #columnaimagen {
+        width: 210px;
+    }
+    #columnamacrodetalles {
+        width: 300px;
+    }
+    #columnamacrodetalles-divinterno {
+        width: 180px;
+    }
+    #filaitemcount {
+        width: 50px;
     }
 }

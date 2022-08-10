@@ -13,7 +13,6 @@ function ItemDetailContainer() {
     const [isLoading, setIsLoading] = useState(true);
     const [itemDetails, setItemDetails] = useState([]);
     let { detalleID } = useParams();
-    console.log('DETALLEOD', detalleID)
 
     useEffect(() => {
         const db = getFirestore();
@@ -21,7 +20,7 @@ function ItemDetailContainer() {
 
         getDocs(productosRef).then((snapshot) => {
             if (detalleID) {
-                console.log(detalleID)
+
                 let itemsTemp = snapshot.docs.find((doc) => doc.data().id == detalleID)
                 setItemDetails(itemsTemp.data());
                 setIsLoading(false);

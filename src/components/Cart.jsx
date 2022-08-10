@@ -18,13 +18,13 @@ function Cart() {
     const noHayItems = () => {
 
         return (
-            <div className="nohayitems"> < button type="button" className="btn btn-light" > No hay productos en tu carrito < Link to='/productos' > <button type="button" className="btn btn-link">Accede aquí para ver nuestros productos</button></Link ></button > </div>
+            <div className="nohayitems"> < button type="button" className="btn btn-light" > No hay productos en tu carrito < Link to='/productos' type="button" className="btn btn-link"> Accede aquí para ver nuestros productos</Link ></button > </div>
         )
     }
 
     const siHayItems = () => {
         return (
-            arrayCarritoLocal.map((x) => < CartItem className="itemscarrito" id={x.id} name={x.name} price={x.price} quantity={x.quantity} URL={x.link} />)
+            arrayCarritoLocal.map((x) => < CartItem className="itemscarrito" key={x.id} id={x.id} name={x.name} price={x.price} quantity={x.quantity} URL={x.link} />)
         )
     }
 
@@ -34,8 +34,8 @@ function Cart() {
 
     return (
         <>
-            <h2>Bienvenido al carrito</h2>
-            <p>Observa abajo los items que has agregado hasta ahora</p>
+            <h2 className="intro-titulo-carrito">Bienvenido al carrito</h2>
+            <p className="intro-text-carrito">Observa abajo los items que has agregado hasta ahora</p>
             {/* {arrayCarritoLocal.map((x) => < CartItem className="items" id={x.id} name={x.name} price={x.price} quantity={x.quantity} URL={x.link} />)} */}
             <div className="div-itemscarrito">
                 {arrayCarrito.cart.length > 0 ? siHayItems() : noHayItems()}

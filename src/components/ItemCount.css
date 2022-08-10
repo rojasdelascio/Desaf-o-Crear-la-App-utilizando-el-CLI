@@ -9,3 +9,19 @@
 .input {
     max-width: 3rem;
 }
+
+@media (min-width:0px) and (max-width:479px) {
+    .btn-group {
+        width: 6rem;
+        height: 2rem;
+    }
+    .input {
+        width: 5rem;
+    }
+    #div-botones {
+        display: flex;
+        flex-direction: column;
+        position: Relative;
+        right: -80%;
+    }
+}

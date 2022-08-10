@@ -7,7 +7,7 @@ function Intro() {
 
             <div className="container">
                 <div className="row">
-                    <div class="col">
+                    <div className="col">
                         <h2 className="intro-titulo">Bienvenido a INDIE-ARG</h2>
                     </div>
 

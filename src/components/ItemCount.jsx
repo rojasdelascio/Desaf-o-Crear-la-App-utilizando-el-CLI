@@ -29,16 +29,13 @@ function ItemCount(props) {
     }
 
     return (
-        <div className="btn-group" role="group" aria-label="Basic example">
+        <div id="div-botones" className="btn-group" role="group" aria-label="Basic example">
 
             <button onClick={resta} type="button" className="btn btn-secondary">-</button>
-            {/* <button type="button" className="btn btn-secondary">{count}</button> */}
             <input onChange={handleChange} className="input" value={count} disabled />
             <button onClick={suma} type="button" className="btn btn-secondary">+</button>
             <button type="button" onClick={() => onAddLocal(count)} className="btn btn-success" >Añadir al carrito</button>
 
-            {/* <Link>
-                <button onClick={onAdd} type="button" className="btn btn-success">Añadir al carrito</button></Link> */}
             <button onClick={reiniciar} type="button" className="btn btn-primary">Reiniciar</button>
 
         </div >

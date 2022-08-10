@@ -140,14 +140,6 @@ Para desplegar la aplicación, se debe modificar en el archivo package.json, en 
 npm run deploy 
 ```
 
-## Construido con 🛠️
-
-*Menciona las herramientas que utilizaste para crear tu proyecto*
-
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-- [Maven](https://maven.apache.org/) - Manejador de dependencias
-- [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
-
 ## Autores ✒️
 
 - **Gustavo Rojas** - *Trabajo Inicial* - [GustavoRojas](https://github.com/rojasdelascio/INDIEARG-Rojas-Delascio.git)

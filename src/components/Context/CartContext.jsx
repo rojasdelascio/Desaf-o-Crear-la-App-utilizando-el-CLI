@@ -11,28 +11,12 @@ export const useCart = () => useContext(CartContext);
 
 const INITIAL_STATE = [];
 
-// DUDA: ¿lo que se debe exportar para envolver a los hijos entonces es la funcion que contiene a las funciones a transferir?
-// DUDA: ¿que son esos children? ¿los children de lo que envuelvo? ¿que pasa si no los pongo?
+
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState(INITIAL_STATE);
 
 
-    // const sumaProductosF = () => {
-    //     cart.forEach(i => {
-    //         return sumaProductosCopia = sumaProductosCopia + i.quantity;
-    //     })
-    // }
-
-    // useEffect(() => {
-    //     setSumaProductos(sumaProductosF());
-    //     console.log(sumaProductos)
-    // }, [cart])
-
-
     const addItem = (item, count) => {
-        //DUDA:¿Por que abajo no me dejo hacerlo con {...cart,...item} me decia que item no era iterable
-        //si voy a otro item desde home y lo agrego, me dice que cart.push no es una funcion
-        //de la forma de abajo, me esta agregando los items, recien cuando doy click en OTRO item, como q los pone en cola
 
         const isInCart = (x) => { return cart.some(i => i.id === x) }
 
@@ -45,7 +29,7 @@ export const CartProvider = ({ children }) => {
                 }
                 return i;
             })
-            console.log('CARTAUZZZZ', cartAux);
+
             setCart(cartAux);
 
 
@@ -90,7 +74,7 @@ export const CartProvider = ({ children }) => {
     const getQuantity = () => {
         let cantidadTotalItems = 0;
         cart.forEach(i => cantidadTotalItems = cantidadTotalItems + parseInt(i.quantity))
-        console.log('CANTOTALITEEEMS', cantidadTotalItems)
+
         return cantidadTotalItems;
     }
 

@@ -137,7 +137,7 @@ Inicia el corredor de prueba en el modo de reloj interactivo.\
 Para desplegar la aplicación, se debe modificar en el archivo package.json, en la propiedad "homepage", de acuerdo a la URL donde se desea desplegar el sitio. Luego, se debe correr el siguiente comando en la ruta del proyecto
 
 ```
-npm run deploy 
+npm run build
 ```
 
 ## Autores ✒️

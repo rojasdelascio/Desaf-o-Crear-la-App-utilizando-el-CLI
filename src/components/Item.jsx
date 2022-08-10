@@ -15,7 +15,7 @@ function Item(props) {
                 <img className="card-img-top" src={imgto} alt="Card image cap" />
                 <h5 className="card-title">{props.nombre}</h5>
                 <p className="card-text">Disponible: {props.stock}</p>
-                <p>Tipo: {props.tipo}</p>
+                <p className="card-tipo">Tipo: {props.tipo}</p>
                 <p className="card-text">{props.descripcion}</p>
                 <Link className="btn btn-primary" to={linkto} >Saber más</Link>
 

@@ -1,8 +1,21 @@
 .card {
     width: 30%;
     max-height: 35rem;
-    margin: 0.5rem;
+    margin: 1rem;
     padding: 0.5rem;
+}
+
+.card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+.card-tipo {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bold;
 }
 
 .card-body {
@@ -17,6 +30,131 @@
 }
 
 .card-text {
-    height: 10%;
+    height: 15%;
     overflow: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+
+/* .intro-titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+.intro-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+} */
+
+@media (min-width:790px) and (max-width:1128px) {
+    .card {
+        width: 30%;
+        min-width: 30%;
+        max-height: 25rem;
+        margin: 0.5rem;
+        padding: 0.2rem;
+    }
+    .card-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    .card-tipo {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+        color: black;
+        font-weight: bold;
+        padding-top: -10px;
+    }
+    .card-body {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img-top {
+        max-height: 35%;
+        max-width: 90%;
+    }
+    .card-text {
+        height: 20%;
+        overflow: hidden;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+        padding: 0;
+    }
+}
+
+@media (min-width:501px) and (max-width:800px) {
+    .card {
+        width: 45%;
+        min-width: 30%;
+        max-height: 25rem;
+        margin: 0.5rem;
+        padding: 0.2rem;
+    }
+    .card-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    .card-tipo {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+        color: black;
+        font-weight: bold;
+        padding-top: -10px;
+    }
+    .card-body {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img-top {
+        max-height: 35%;
+        max-width: 90%;
+    }
+    .card-text {
+        height: 20%;
+        overflow: hidden;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1rem;
+        padding: 0;
+    }
+}
+
+@media (min-width:0px) and (max-width:500px) {
+    .card {
+        width: 90%;
+        margin: 0.5rem;
+        padding: 0.2rem;
+    }
+    .card-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.3rem;
+        padding-top: 1rem;
+    }
+    .card-tipo {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.2rem;
+        color: black;
+        font-weight: bold;
+    }
+    .card-body {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card-img-top {
+        max-height: 80%;
+        max-width: 90%;
+    }
+    .card-text {
+        height: 20%;
+        overflow: hidden;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.2rem;
+        padding: 0;
+    }
 }
